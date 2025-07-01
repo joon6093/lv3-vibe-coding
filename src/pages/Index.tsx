@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import StoreCard from '../components/StoreCard';
 import OrderModal from '../components/OrderModal';
+import OwnerSection from '../components/OwnerSection';
+import GameElements from '../components/GameElements';
 
 const Index = () => {
   const [selectedStore, setSelectedStore] = useState<{name: string, cashback: number} | null>(null);
@@ -83,6 +85,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <HeroSection />
+      <GameElements />
       
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-6">
@@ -134,6 +137,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      <OwnerSection />
       
       <OrderModal
         isOpen={selectedStore !== null}
