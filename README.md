@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# 🥡 포장의 민족 - Pick-up Pal Payback
 
-## Project info
+**배달비 아깝다면, 직접 가서 포장하고 캐시백 받으세요!**  
+포장의 민족은 고객과 사장님 모두가 **배달비를 아끼고, 경험을 살리는 새로운 외식 방식**을 제안합니다.
 
-**URL**: https://lovable.dev/projects/420e99cd-03d3-4159-adc4-9607eab40e61
+> **“그냥 와서 가져가면 배달비 드려요!”**
 
-## How can I edit this code?
+[👉 앱 바로가기](https://pick-up-pal-payback.lovable.app)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 📌 서비스 소개
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/420e99cd-03d3-4159-adc4-9607eab40e61) and start prompting.
+기존 배달 앱은 너무 비쌉니다.  
+근처 음식점인데도 3,000원~5,000원씩 붙는 배달비는 고객과 사장님 모두에게 부담입니다.  
 
-Changes made via Lovable will be committed automatically to this repo.
+**포장의 민족**은 이 문제를 정면 돌파합니다.
 
-**Use your preferred IDE**
+- 사용자는 직접 가게에 방문해 포장
+- 사장님은 배달비만큼 현금을 돌려줌
+- 앱은 포장 주문 → 결제 → 방문 수령 → 캐시백까지 전 과정 안내
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 👥 주요 사용자
 
-Follow these steps:
+| 사용자 | 니즈 |
+|--------|------|
+| 일반 고객 | 배달비 없이 저렴하게 근처 음식을 먹고 싶음 |
+| 음식점 사장님 | 배달 수수료를 아끼고, 단골을 확보하고 싶음 |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ✨ 주요 기능
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🏠 메인 화면
+- 주변 매장 리스트 + 페이백 금액 표시
+- 실시간 위치 기반 정렬
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 📦 포장 주문 흐름
+- 메뉴 선택 → 결제 → 픽업 예약 → 수령 시 캐시백
 
-**Edit a file directly in GitHub**
+### 🏪 사장님 기능
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### ✅ 간편 가게 등록  
+5분만에 가게 정보 입력하고 바로 서비스 시작!  
+메뉴, 운영시간, 위치 정보를 쉽게 등록하세요.
 
-**Use GitHub Codespaces**
+#### ✅ 수익성 자동 계산  
+배달 수수료 vs 페이백 비용을 실시간 비교!  
+최적의 페이백 금액을 AI가 추천해드립니다.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+#### ✅ 이벤트 자유 설정  
+첫 방문 보너스, 시간대별 특가, 날씨 이벤트 등  
+창의적인 마케팅을 직접 기획하세요.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/420e99cd-03d3-4159-adc4-9607eab40e61) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+#### ✅ 직접 방문의 장점
+- 더 정성스러운 요리
+- 손님과 직접 소통 가능
+- 재주문 비율 증가
