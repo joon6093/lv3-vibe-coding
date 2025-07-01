@@ -1,10 +1,10 @@
+
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import StoreCard from '../components/StoreCard';
 import OrderModal from '../components/OrderModal';
 import OwnerSection from '../components/OwnerSection';
-import GameElements from '../components/GameElements';
 
 const Index = () => {
   const [selectedStore, setSelectedStore] = useState<{name: string, cashback: number} | null>(null);
@@ -84,7 +84,6 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <HeroSection />
-      <GameElements />
       
       {/* Main Content - 매장 리스트 */}
       <section className="py-16">
