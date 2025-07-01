@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Store, Calculator, Gift, Trophy, Star, Target } from 'lucide-react';
+import { Store, Calculator, Gift, Trophy, Star, Target, Users, Heart } from 'lucide-react';
 
 const OwnerSection = () => {
   return (
@@ -11,8 +10,7 @@ const OwnerSection = () => {
             🏪 사장님, 이제 직접 관리하세요!
           </h2>
           <p className="text-xl text-blue-700 mb-8">
-            가게 등록부터 페이백 설정, 특별 이벤트까지 모두 사장님이 결정!<br/>
-            손님이 직접 방문하니 더 정성껏 요리하게 되고, 열심히 하는 손님은 재주문도 늘어납니다!
+            가게 등록부터 페이백 설정, 특별 이벤트까지 모두 사장님이 결정!
           </p>
         </div>
 
@@ -47,6 +45,39 @@ const OwnerSection = () => {
             <p className="text-gray-600 text-center">
               첫 방문 보너스, 시간대별 특가, 날씨 이벤트 등
               창의적인 마케팅을 직접 기획하세요!
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Heart className="text-orange-600" size={32} />
+            </div>
+            <h3 className="text-xl font-semibold text-center mb-3">더 정성스러운 요리</h3>
+            <p className="text-gray-600 text-center">
+              손님이 직접 방문하니 더 정성껏 요리하게 되고,
+              음식 품질 향상으로 만족도가 높아집니다!
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Users className="text-pink-600" size={32} />
+            </div>
+            <h3 className="text-xl font-semibold text-center mb-3">재주문 증가</h3>
+            <p className="text-gray-600 text-center">
+              열심히 오는 손님들은 재주문도 늘어나고,
+              단골 고객 확보로 안정적인 매출 증대!
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Star className="text-indigo-600" size={32} />
+            </div>
+            <h3 className="text-xl font-semibold text-center mb-3">직접 소통</h3>
+            <p className="text-gray-600 text-center">
+              손님과 직접 만나 소통하며 피드백 수집!
+              맞춤형 서비스로 고객 만족도 향상
             </p>
           </div>
         </div>
