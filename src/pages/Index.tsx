@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
@@ -87,56 +86,69 @@ const Index = () => {
       <HeroSection />
       <GameElements />
       
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-2">근처 포장 가능한 맛집</h2>
-          <p className="text-gray-600">직접 가서 픽업하고 현금 캐시백을 받아보세요!</p>
+      {/* Main Content - 매장 리스트 */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">근처 포장 가능한 맛집</h2>
+            <p className="text-gray-600 text-lg">직접 가서 픽업하고 현금 캐시백을 받아보세요!</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {stores.map((store, index) => (
+              <StoreCard
+                key={index}
+                {...store}
+                onOrderClick={() => handleOrderClick(store)}
+              />
+            ))}
+          </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {stores.map((store, index) => (
-            <StoreCard
-              key={index}
-              {...store}
-              onOrderClick={() => handleOrderClick(store)}
-            />
-          ))}
-        </div>
-        
-        <div className="mt-12 bg-white rounded-lg p-6 shadow-sm">
-          <h3 className="text-xl font-semibold mb-4 text-center">💡 이용 방법</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-            <div className="flex flex-col items-center space-y-2">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
+      </section>
+
+      {/* How to Use Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">💡 이용 방법</h3>
+            <p className="text-gray-600 text-lg">간단한 4단계로 현금을 받아가세요</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 📱
               </div>
-              <p className="font-medium">1. 앱에서 주문</p>
-              <p className="text-sm text-gray-500">메뉴 선택하고 결제</p>
+              <h4 className="text-xl font-bold mb-3">1. 앱에서 주문</h4>
+              <p className="text-gray-600">메뉴 선택하고 미리 결제</p>
             </div>
-            <div className="flex flex-col items-center space-y-2">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
+            
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 🚶‍♂️
               </div>
-              <p className="font-medium">2. 매장 방문</p>
-              <p className="text-sm text-gray-500">예약 시간에 맞춰 방문</p>
+              <h4 className="text-xl font-bold mb-3">2. 매장 방문</h4>
+              <p className="text-gray-600">예약 시간에 맞춰 방문</p>
             </div>
-            <div className="flex flex-col items-center space-y-2">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
+            
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-500 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 🥡
               </div>
-              <p className="font-medium">3. 음식 수령</p>
-              <p className="text-sm text-gray-500">주문번호로 음식 받기</p>
+              <h4 className="text-xl font-bold mb-3">3. 음식 수령</h4>
+              <p className="text-gray-600">주문번호로 음식 받기</p>
             </div>
-            <div className="flex flex-col items-center space-y-2">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
+            
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 💰
               </div>
-              <p className="font-medium">4. 현금 환급</p>
-              <p className="text-sm text-gray-500">배달비만큼 현금 받기</p>
+              <h4 className="text-xl font-bold mb-3">4. 현금 환급</h4>
+              <p className="text-gray-600">배달비만큼 현금 받기</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <OwnerSection />
       

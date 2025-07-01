@@ -26,52 +26,52 @@ const StoreCard: React.FC<StoreCardProps> = ({
   onOrderClick
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow cursor-pointer">
+    <div className="bg-white rounded-2xl shadow-sm border hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden">
       <div className="relative">
-        <div className="h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-t-lg flex items-center justify-center">
-          <div className="text-4xl">{image}</div>
+        <div className="h-52 bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center relative">
+          <div className="text-6xl group-hover:scale-110 transition-transform duration-300">{image}</div>
+          {cashback > 0 && (
+            <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-2 rounded-full text-sm font-bold shadow-lg">
+              💰 {cashback.toLocaleString()}원 환급
+            </div>
+          )}
+          {!isOpen && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center backdrop-blur-sm">
+              <span className="text-white font-bold text-lg">영업종료</span>
+            </div>
+          )}
         </div>
-        {cashback > 0 && (
-          <div className="absolute top-3 right-3 bg-orange-500 text-white px-2 py-1 rounded-full text-sm font-semibold">
-            💰 {cashback.toLocaleString()}원 환급
-          </div>
-        )}
-        {!isOpen && (
-          <div className="absolute inset-0 bg-black bg-opacity-30 rounded-t-lg flex items-center justify-center">
-            <span className="text-white font-semibold">영업종료</span>
-          </div>
-        )}
       </div>
       
-      <div className="p-4">
-        <div className="flex items-start justify-between mb-2">
-          <div>
-            <h3 className="font-semibold text-lg">{name}</h3>
-            <p className="text-gray-500 text-sm">{category}</p>
+      <div className="p-6">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1">
+            <h3 className="font-bold text-xl mb-1">{name}</h3>
+            <p className="text-gray-500">{category}</p>
           </div>
-          <div className="flex items-center space-x-1">
-            <Star size={14} className="text-yellow-400 fill-current" />
-            <span className="text-sm font-medium">{rating}</span>
+          <div className="flex items-center space-x-1 bg-yellow-50 px-2 py-1 rounded-full">
+            <Star size={16} className="text-yellow-500 fill-current" />
+            <span className="text-sm font-semibold text-yellow-700">{rating}</span>
           </div>
         </div>
         
-        <div className="flex items-center justify-between text-sm text-gray-600 mb-3">
+        <div className="flex items-center justify-between text-sm text-gray-600 mb-6">
           <div className="flex items-center space-x-1">
-            <MapPin size={14} />
-            <span>{distance}</span>
+            <MapPin size={16} className="text-blue-500" />
+            <span className="font-medium">{distance}</span>
           </div>
           <div className="flex items-center space-x-1">
-            <Clock size={14} />
-            <span>픽업 {pickupTime}</span>
+            <Clock size={16} className="text-green-500" />
+            <span className="font-medium">픽업 {pickupTime}</span>
           </div>
         </div>
         
         <button
           onClick={onOrderClick}
           disabled={!isOpen}
-          className={`w-full py-2 rounded-lg font-medium transition-colors ${
+          className={`w-full py-3 rounded-xl font-bold transition-all duration-300 ${
             isOpen
-              ? 'bg-orange-500 hover:bg-orange-600 text-white'
+              ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'
               : 'bg-gray-200 text-gray-400 cursor-not-allowed'
           }`}
         >
