@@ -7,6 +7,8 @@
 
 [👉 웹 바로가기](https://pick-up-pal-payback.lovable.app)
 
+[👀 관련 기사](https://www.khan.co.kr/article/202504131627001)
+
 ---
 
 ## 📌 서비스 소개
